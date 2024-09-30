@@ -1,0 +1,219 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Python DSc and ML]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Python DSc and ML</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Sep 2024 14:18:49 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Sep 2024 14:18:49 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Syntax and Semantics in Python]]></title><description><![CDATA[ 
+ <br>
+<br>Single line Comments and multiline comments
+<br>Definition of Syntax and Semantics
+<br>Basic Syntax Rules in Python
+<br>Understanding Semantics in Python
+<br>Common Syntax Errors and How to Avoid Them
+<br>Practical Code Examples
+<br><br><br>## This is a single line comment
+print("Hello World")
+Copy<br>Output
+Copy<br>Hello World
+Copy<br><br>
+<br>Syntax refers to the set of rules that defines the combinations of symbols that are considered to be correctly structured programs in a language. In simpler terms, syntax is about the correct arrangement of words and symbols in a code.
+<br>Semantics refers to the meaning or the interpretation of the symbols, characters, and commands in a language. It is about what the code is supposed to do when it runs.
+<br><br><br>name="Krish"
+Name="Naik"
+print(name)
+print(Name)
+Copy<br>Output
+Copy<br>Krish 
+Naik
+Copy<br><br>
+<br>Indentation in Python is used to define the structure and hierarchy of the code. Unlike many other programming languages that use braces {} to delimit blocks of code, Python uses indentation to determine the grouping of statements. This means that all the statements within a block must be indented at the same level.
+<br>Python uses indentation to define blocks of code. Consistent use of spaces (commonly 4) or a tab is required.
+<br>age=32
+if age&gt;30:
+    print(age)
+print(age)
+Copy<br>Output
+Copy<br>32 
+32
+Copy<br><br>## Use a backslash (\) to continue a statement to the next line
+total=1+2+3+4+5+6+7+\
+4+5+6
+print(total)
+Copy<br>Output
+Copy<br>43
+Copy<br><br>x=5;y=10;z=x+y
+print(z)
+Copy<br>Output
+Copy<br>15
+Copy<br><br><br>age=32 ##age is an integer
+name="Krish" ##name is a string
+type(age)
+type(name)
+Copy<br>Output
+Copy<br>int
+str
+Copy<br><br>variable=10
+print(type(variable))
+variable="Krish"
+print(type(variable))
+Copy<br>Output
+Copy<br>&lt;class 'int'&gt; 
+&lt;class 'str'&gt;
+Copy<br>age=32
+if age&gt;30:
+    print(age)
+Copy<br>Output
+Copy<br>32
+Copy<br><br>a=b
+Copy<br>Output
+Copy<br>--------------------------------------------------------------------------- 
+NameError Traceback (most recent call last) Cell In[11], [line 2]
+	  [1] ## Name Error 
+----&gt; [2] a=b 
+NameError: name 'b' is not defined
+Copy<br><br>if True:
+    print("Correct Indentation")
+    if False:
+        print("This ont print")
+    print("This will print")
+print("Outside the if block")
+Copy<br>Output
+Copy<br>Correct Indentation 
+This will print 
+Outside the if block
+Copy]]></description><link>1. Basics.html</link><guid isPermaLink="false">1. Basics.md</guid><pubDate>Mon, 30 Sep 2024 14:13:46 GMT</pubDate></item><item><title><![CDATA[Introduction]]></title><description><![CDATA[ 
+ <br><br>
+<br>Variables are fundamental elements in programming used to store data that can be referenced and manipulated in a program. 
+<br>In Python, variables are created when you assign a value to them, and they do not need explicit declaration to reserve memory space. 
+<br>The declaration happens automatically when you assign a value to a variable.
+<br><br>
+<br>Introduction to Variables
+<br>Declaring and Assigning Variables
+<br>Naming Conventions
+<br>Understanding Variable Types
+<br>Type Checking and Conversion
+<br>Dynamic Typing
+<br>Practical Examples and Common Errors
+<br>a=100
+Copy<br><br>age=32
+height=6.1
+name="Krish"
+is_student=True
+Copy<br><br>print("age :",age)
+print("Height:",height)
+print("Name:",name)
+Copy<br>Output
+Copy<br>age : 32 
+Height: 6.1 
+Name: Krish
+Copy<br><br>
+<br>Variable names should be descriptive
+<br>They must start with a letter or an '_' and contains letter,numbers and underscores
+<br>variables names case sensitive
+<br>#valid variable names
+first_name="Krish"
+last_name="Naik"
+Copy<br><br>2age=30
+first-name="Krish"
+@name="Krish"
+Copy<br>  Cell In[5], line 1
+    2age=30
+    ^
+SyntaxError: invalid decimal literal
+
+Cell In[10], line 1
+    first-name="Krish"
+    ^
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+
+
+  Cell In[12], line 1
+    @name="Krish"
+     ^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+
+Copy<br><br>name="Krish"
+Name="Naik"
+name==Name
+Copy<br>Output
+Copy<br>False
+Copy<br><br>
+<br>Python is dynamically typed, type of a variable is determined at runtime
+<br>age=25 #int
+height=6.1 #float
+name="KRish" #str
+is_student=True #bool
+print(type(name))
+type(height) #float
+age=25
+print(type(age)) #int
+Copy<br>Output
+Copy<br>&lt;class 'str'&gt;
+Copy<br><br>
+<br>Ex-1
+<br>age_str=str(age)
+print(age_str)
+print(type(age_str))
+Copy<br>Output
+Copy<br>&lt;class 'int'&gt; 
+25 
+&lt;class 'str'&gt;
+Copy<br>
+<br>Ex-2
+<br>age='25'
+print(type(int(age)))
+Copy<br>Output
+Copy<br>&lt;class 'int'&gt;
+Copy<br>
+<br>Ex-3
+<br>name="Krish"
+int(name)
+Copy<br>Output
+Copy<br>---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[14], line 2
+      1 name="Krish"
+----&gt; 2 int(name)
+
+ValueError: invalid literal for int() with base 10: 'Krish'
+Copy<br>
+<br>Ex-4
+<br>height=5.11
+type(height) #float
+float(int(height)) #5.0
+Copy<br><br>
+<br>Python allows the type of a variable to change as the program executes
+<br>var=10 #int
+print(var,type(var))
+var="Hello"
+print(var,type(var))
+var=3.14
+print(var,type(var))
+Copy<br>Output
+Copy<br>10  &lt;class 'int'&gt; 
+Hello &lt;class 'str'&gt; 
+3.14 &lt;class 'float'&gt;
+Copy<br><br>age=int(input("What is the age")) #Default is String
+print(age,type(age))
+Copy<br>Output
+Copy<br>23 &lt;class 'int'&gt;
+Copy<br><br>num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+sum = num1 + num2
+difference = num1 - num2
+product = num1 * num2
+quotient = num1 / num2
+
+print("Sum:", sum)
+print("Difference:", difference)
+print("Product:", product)
+print("Quotient:", quotient)
+Copy<br>Output
+Copy<br>Sum: 66.0 
+Difference: 46.0 
+Product: 560.0 
+Quotient: 5.6
+Copy<br><br>
+<br>Variables are essential in Python programming for storing and manipulating data. Understanding how to declare, assign, and use variables effectively is crucial for writing functional and efficient code. 
+<br>Following proper naming conventions and understanding variable types will help in maintaining readability and consistency in your code.
+]]></description><link>2. Variables.html</link><guid isPermaLink="false">2. Variables.md</guid><pubDate>Mon, 30 Sep 2024 14:13:55 GMT</pubDate></item><item><title><![CDATA[Python]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="1. Basics" href="1. Basics.html" class="internal-link" target="_self" rel="noopener">1. Basics</a>
+<br><a data-href="2. Variables" href="2. Variables.html" class="internal-link" target="_self" rel="noopener">2. Variables</a>
+]]></description><link>Index.html</link><guid isPermaLink="false">Index.md</guid><pubDate>Mon, 30 Sep 2024 14:13:31 GMT</pubDate></item></channel></rss>
